@@ -181,7 +181,7 @@
                     <width>80</width>
                     <centerright>$PARAM[centerright]</centerright>
                     <control type="group">
-                        <visible>![Control.HasFocus($PARAM[id]) | $PARAM[altfocus]]</visible>
+                        <visible>true</visible>
                         <include content="Layout_Home_Menu">
                             <param name="selected">false</param>
                             <param name="detailed">[Control.HasFocus($PARAM[id]) | $PARAM[altfocus]]</param>
@@ -212,7 +212,7 @@
                         <font>font_main</font>
                         <textcolor>$VAR[Layout_Home_Menu_Color_NF]</textcolor>
                         <label>$INFO[ListItem.Label]</label>
-                        <visible>![Control.HasFocus($PARAM[id]) | $PARAM[altfocus]]</visible>
+                        <visible>true</visible>
                     </control>
                     <control type="label">
                         <aligny>center</aligny>
@@ -259,7 +259,7 @@
             <control type="image">
                 <texture colordiffuse="$VAR[Layout_Home_Menu_Color_NF]">$VAR[Image_SearchDiscover]</texture>
                 <bordersize>icon_home_bordersize</bordersize>
-                <visible>![Control.HasFocus($PARAM[id]) + !Window.IsVisible(1163)]</visible>
+                <visible>true</visible>
             </control>
             <control type="image">
                 <texture colordiffuse="$VAR[ColorSelected]">$VAR[Image_SearchDiscover]</texture>
@@ -302,7 +302,7 @@
             <control type="image">
                 <texture colordiffuse="$VAR[Layout_Home_Menu_Color_NF]">special://skin/extras/icons/bars.png</texture>
                 <bordersize>icon_home_bordersize</bordersize>
-                <visible>![Control.HasFocus($PARAM[id]) + !Window.IsVisible(1163)]</visible>
+                <visible>true</visible>
             </control>
             <control type="image">
                 <texture colordiffuse="$VAR[ColorSelected]">special://skin/extras/icons/bars.png</texture>
