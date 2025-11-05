@@ -1,7 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog">
-    <onload>Close</onload>
-    <onload condition="!Window.IsActive(1170)">ActivateWindow(1170)</onload>
-    <onload condition="Window.IsActive(1170)">Dialog.Close(1170)</onload>
-    <controls />
+	<onload>Close</onload>
+	<onload condition="!Window.IsActive(1170)">ActivateWindow(1170)</onload>
+	<onload condition="Window.IsActive(1170)">Dialog.Close(1170)</onload>
+	<controls>
+		<!-- Exit Kodi -->
+		<control type="button">
+			<label>$LOCALIZE[13012]</label>
+			<onclick>Quit()</onclick>
+			<visible>System.ShowExitButton</visible>
+		</control>
+		
+		<!-- Power Down -->
+		<control type="button">
+			<label>$LOCALIZE[13016]</label>
+			<onclick>Powerdown()</onclick>
+			<visible>System.CanPowerDown</visible>
+		</control>
+		
+		<!-- Suspend -->
+		<control type="button">
+			<label>$LOCALIZE[13011]</label>
+			<onclick>Suspend()</onclick>
+			<visible>System.CanSuspend</visible>
+		</control>
+		
+		<!-- Hibernate -->
+		<control type="button">
+			<label>$LOCALIZE[13010]</label>
+			<onclick>Hibernate()</onclick>
+			<visible>System.CanHibernate</visible>
+		</control>
+		
+		<!-- Reboot/Reset -->
+		<control type="button">
+			<label>$LOCALIZE[13013]</label>
+			<onclick>Reset()</onclick>
+			<visible>System.CanReboot</visible>
+		</control>
+		
+		<!-- Minimize (if supported by OS) -->
+		<control type="button">
+			<label>$LOCALIZE[13014]</label>
+			<onclick>Minimize()</onclick>
+		</control>
+	</controls>
 </window>
